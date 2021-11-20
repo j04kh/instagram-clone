@@ -11,14 +11,21 @@ interface Props {
 }
 
 const Navbar: React.FC<Props> = ({ page, username }) => {
-  if (page === "profile") {
-    return (
-      <header className="w-full h-12 px-4 z-10 fixed bg-white border-b border-gray-300 flex items-center justify-between">
-        <ConfigIcon />
-        <h1 className="font-medium text-lg">{username}</h1>
-        <InviteIcon />
-      </header>
-    );
+  switch (page) {
+    case "profile":
+      return (
+        <header className="w-full h-12 px-4 z-10 fixed bg-white border-b border-gray-300 flex items-center justify-between">
+          <ConfigIcon />
+          <h1 className="font-medium text-lg">{username}</h1>
+          <InviteIcon />
+        </header>
+      );
+    case "activity":
+      return (
+        <header className="w-full h-12 px-4 z-10 fixed bg-white border-b border-gray-300 flex items-center justify-center">
+          <h1 className="font-medium text-lg">Acitivity</h1>
+        </header>
+      );
   }
 
   return (

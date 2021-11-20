@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Component {...pageProps} />
-      <BottomNavBar page={router.pathname} />
+      <BottomNavBar page={router.pathname} profilePicture="/avatar1.png" />
     </>
   );
 }
