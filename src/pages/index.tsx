@@ -17,7 +17,7 @@ type Post = {
 
 const Home: NextPage<any> = ({ posts }) => {
   const getPosts = () => {
-    const postsList: Post[] = posts.reverse().map((post: Post) => {
+    const postsList: Post[] = posts.map((post: Post) => {
       return (
         <Post
           key={post._id}

@@ -1,4 +1,4 @@
-import Logo from "../public/logo.png";
+import Logo from "../../public/logo.png";
 import Image from "next/image";
 import CameraIcon from "./icons/CameraIcon";
 import ConfigIcon from "./icons/ConfigIcon";
