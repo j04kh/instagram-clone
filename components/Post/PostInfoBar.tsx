@@ -11,14 +11,14 @@ const defaultPicture = "/default.jpeg";
 const PostInfoBar: React.FC<Props> = ({
   username,
   location,
-  profilePicture = defaultPicture,
+  profilePicture,
 }) => {
   return (
     <div className="w-full h-16 bg-white flex items-center px-2">
       <div className="flex w-full">
         <div className="h-9 w-9 mr-2 rounded-full">
           <Image
-            src={profilePicture}
+            src={profilePicture || defaultPicture}
             width="50"
             height="50"
             objectFit="contain"

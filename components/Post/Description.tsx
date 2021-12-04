@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Props {
-  likes: number;
+  likes: string;
   username: string;
   description?: string;
   timeAgo: string;
@@ -16,7 +16,7 @@ const Description: React.FC<Props> = ({
   return (
     <React.Fragment>
       <h1 className="px-4 font-medium">
-        {likes !== 0 ? `${likes} likes` : "No one liked this post yet"}
+        {likes !== "0" ? `${likes} likes` : "No one liked this post yet"}
       </h1>
       <h1 className="px-4 font-medium">
         {username}

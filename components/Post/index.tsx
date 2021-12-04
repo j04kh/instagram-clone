@@ -8,7 +8,7 @@ interface Props {
   profilePicture?: string;
   location?: string;
   photo: string;
-  likes: number;
+  likes: string;
   description?: string;
   timeAgo: string;
 }
