@@ -6,7 +6,7 @@ interface Props {
 
 const Numbers: React.FC<Props> = ({ posts, followers, following }) => {
   return (
-    <div className="w-full h-16 px-10 flex items-center text-gray-700 text-sm font-light justify-between border-1 border-b border-gray-300">
+    <div className="w-full h-16 px-10 flex items-center text-gray-700 text-sm font-light justify-between border-b border-gray-300">
       <div className="flex-col">
         <h1 className="text-black font-bold text-md text-center">{posts}</h1>
         <p>Posts</p>

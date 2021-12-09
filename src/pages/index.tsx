@@ -35,9 +35,9 @@ const Home: NextPage<any> = ({ posts }) => {
   };
 
   return (
-    <div className="w-screen h-screen bg-gray-100 ">
+    <div className="w-full h-full min-w-screen min-h-screen">
       <Navbar />
-      <main className="w-full pb-12 pt-12 flex-1 flex-col">
+      <main className="w-full pb-12 pt-12 flex-1 flex-col lg:pt-32">
         <StoriesBar />
         {getPosts()}
       </main>

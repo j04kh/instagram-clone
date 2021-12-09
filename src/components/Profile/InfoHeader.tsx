@@ -18,7 +18,7 @@ const InfoHeader: React.FC<Props> = ({
 }) => {
   return (
     <React.Fragment>
-      <div className="width-full px-4 flex pt-16">
+      <div className="w-full px-4 flex pt-16">
         <Image
           src={profilePicture}
           width={120}
@@ -33,7 +33,7 @@ const InfoHeader: React.FC<Props> = ({
           </div>
         </div>
       </div>
-      <div className="px-4">
+      <div className="px-4 ">
         <h1 className="mt-3 text-lg font-medium">{name}</h1>
         <h2 className="text-sm mb-2">{description}</h2>
       </div>

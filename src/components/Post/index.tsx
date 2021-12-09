@@ -23,7 +23,7 @@ const Post: React.FC<Props> = ({
   photo,
 }) => {
   return (
-    <div className="w-full bg-white flex-col">
+    <div className="w-full max-w-xl mx-auto bg-white flex-col border border-gray-100">
       <PostInfoBar
         username={username}
         location={location}

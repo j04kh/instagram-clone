@@ -36,6 +36,7 @@ const Notification: React.FC<Props> = ({
                 height={50}
                 objectFit="contain"
                 alt="User profile picture"
+                className="rounded-full"
               />
             </div>
 
@@ -45,7 +46,6 @@ const Notification: React.FC<Props> = ({
               <span className="font-light text-gray-600"> {date}</span>
             </p>
           </div>
-          {/* fix images sizes */}
           <button className="px-4 py-1 bg-blue-500 rounded-md">
             <p className="text-white text-sm">Follow</p>
           </button>

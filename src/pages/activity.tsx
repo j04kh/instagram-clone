@@ -6,20 +6,20 @@ const activity: NextPage = () => {
   return (
     <>
       <Navbar page="activity" />
-      <div className="w-full h-full px-3 py-12 min-h-screen flex-col">
+      <div className="w-full px-3 py-12 min-h-screen flex-col">
         <h1 className="my-2 font-bold text-sm">This month</h1>
         <Notification
-          username="username1"
+          username="dev123"
           date="1d"
           type={1}
-          profilePicture="/avatar1.png"
+          profilePicture="https://iili.io/7WqNkv.jpg"
           postPreview="/sample.jpg"
         />
         <Notification
-          username="username2"
+          username="traveler19"
           date="1w"
           type={1}
-          profilePicture="/avatar1.png"
+          profilePicture="https://iili.io/7WqwYJ.jpg"
           postPreview="/sample.jpg"
         />
         <Notification
@@ -29,10 +29,10 @@ const activity: NextPage = () => {
           profilePicture="/default.jpeg"
         />
         <Notification
-          username="user3"
+          username="marta_123"
           date="2w"
           type={0}
-          profilePicture="/default.jpeg"
+          profilePicture="https://iili.io/7Wqj2a.jpg"
         />
         <Notification
           username="user4"
