@@ -15,7 +15,7 @@ type Post = {
   timeAgo: string;
 };
 
-const Home: NextPage<any> = ({ posts }) => {
+const Home: NextPage<any> = ({ posts, stories }) => {
   const getPosts = () => {
     const postsList: Post[] = posts.map((post: Post) => {
       return (
@@ -38,7 +38,7 @@ const Home: NextPage<any> = ({ posts }) => {
     <div className="w-full h-full min-w-screen min-h-screen">
       <Navbar />
       <main className="w-full pb-12 pt-12 flex-1 flex-col lg:pt-32">
-        <StoriesBar />
+        <StoriesBar stories={stories} />
         {getPosts()}
       </main>
     </div>
@@ -48,9 +48,11 @@ const Home: NextPage<any> = ({ posts }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/posts");
-  const data = await res.json();
+  const postsRes = await fetch("http://localhost:3000/api/posts");
+  const postsData = await postsRes.json();
+  const storiesRes = await fetch("http://localhost:3000/api/stories");
+  const storiesData = await storiesRes.json();
   return {
-    props: { posts: data.posts },
+    props: { posts: postsData.posts, stories: storiesData.stories },
   };
 };
