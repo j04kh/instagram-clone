@@ -1,18 +1,17 @@
 import StoryPreview from "./StoryPreview";
-import type { GetStaticProps } from "next";
 import React from "react";
 
 type Story = {
   _id: string;
   username: string;
   profilePicture?: string;
-  // photo?: string;
-  // timeAgo?: string;
+  photo?: string;
+  timeAgo?: string;
 };
 
 const StoriesBar: React.FC<any> = ({ profile, stories }) => {
   const getStories = () => {
-    const storiesList: Story[] = stories.map((story: Story) => {
+    const storiesList: Story[] = stories.posts.map((story: Story) => {
       return (
         <StoryPreview
           key={story._id}
