@@ -4,6 +4,7 @@ import CameraIcon from "./icons/CameraIcon";
 import ConfigIcon from "./icons/ConfigIcon";
 import MessengerIcon from "./icons/MessengerIcon";
 import InviteIcon from "./icons/InviteIcon";
+import React from "react";
 
 interface Props {
   page?: string;

@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import BottomNavBar from "../components/BottomNavBar";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
