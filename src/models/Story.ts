@@ -14,7 +14,7 @@ const storySchema = new Schema(
   },
   {
     timestamps: true,
-    collection: "posts",
+    collection: "stories",
   }
 );
 

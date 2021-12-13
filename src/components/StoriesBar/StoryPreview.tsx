@@ -21,7 +21,7 @@ const StoryPreview: React.FC<Props> = ({
         }`}
       >
         <Image
-          src={profilePicture}
+          src={profilePicture || defaultPicture}
           height={100}
           width={100}
           className="h-full w-full rounded-full border-2 border-white"

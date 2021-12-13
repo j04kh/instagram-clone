@@ -20,7 +20,7 @@ const Home: NextPage<any> = () => {
   const { data: posts, error: postsError } = useSWR("/api/posts", (url) =>
     fetch(url).then((res) => res.json())
   );
-  const { data: stories, error: storiesError } = useSWR("/api/posts", (url) =>
+  const { data: stories, error: storiesError } = useSWR("/api/stories", (url) =>
     fetch(url).then((res) => res.json())
   );
 

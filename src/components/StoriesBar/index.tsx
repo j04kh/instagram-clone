@@ -9,9 +9,14 @@ type Story = {
   timeAgo?: string;
 };
 
-const StoriesBar: React.FC<any> = ({ profile, stories }) => {
+interface Props {
+  profile?: boolean;
+  stories?: any;
+}
+
+const StoriesBar: React.FC<Props> = ({ profile, stories }) => {
   const getStories = () => {
-    const storiesList: Story[] = stories.posts.map((story: Story) => {
+    const storiesList: Story[] = stories.stories.map((story: Story) => {
       return (
         <StoryPreview
           key={story._id}
