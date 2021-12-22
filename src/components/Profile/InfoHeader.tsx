@@ -1,11 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import Button from "./Button";
 
 interface Props {
   username: string;
   name: string;
   description?: string;
   profilePicture?: string;
+  myProfile?: boolean;
+  following?: boolean;
 }
 
 const defaultPicture = "/default.jpeg";
@@ -15,6 +18,8 @@ const InfoHeader: React.FC<Props> = ({
   name,
   description,
   profilePicture = defaultPicture,
+  myProfile,
+  following,
 }) => {
   return (
     <React.Fragment>
@@ -28,9 +33,7 @@ const InfoHeader: React.FC<Props> = ({
         />
         <div className="flex-col ml-5 w-full">
           <h1 className="text-xl font-medium">{username}</h1>
-          <div className="border-1 max-w-xs w-full mt-2 rounded-md h-8 border-2 border-gray-300 text-center">
-            <p className="font-medium">Edit profile</p>
-          </div>
+          <Button following />
         </div>
       </div>
       <div className="px-4 ">

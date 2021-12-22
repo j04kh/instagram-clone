@@ -14,6 +14,7 @@ const postSchema = new Schema(
     likes: { type: String },
     description: { type: String, trim: true },
     timeAgo: { type: String, required: true },
+    user_id: { type: ObjectID },
   },
   {
     timestamps: true,

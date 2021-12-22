@@ -4,17 +4,7 @@ import StoriesBar from "../components/StoriesBar";
 import Post from "../components/Post";
 import React from "react";
 import useSWR from "swr";
-
-type Post = {
-  _id: string;
-  username: string;
-  profilePicture: string;
-  location: string;
-  photo: string;
-  likes: string;
-  description: string;
-  timeAgo: string;
-};
+import type { PostType } from "../types/index";
 
 const Home: NextPage<any> = () => {
   const { data: posts, error: postsError } = useSWR("/api/posts", (url) =>
@@ -25,7 +15,7 @@ const Home: NextPage<any> = () => {
   );
 
   const getPosts = () => {
-    const postsList: Post[] = posts.posts.map((post: Post) => {
+    const postsList: PostType[] = posts.posts.map((post: PostType) => {
       return (
         <Post
           key={post._id}

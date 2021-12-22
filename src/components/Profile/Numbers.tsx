@@ -1,7 +1,7 @@
 interface Props {
-  posts: number;
-  followers: number;
-  following: number;
+  posts: string;
+  followers: string;
+  following: string;
 }
 
 const Numbers: React.FC<Props> = ({ posts, followers, following }) => {
