@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import React from "react";
 import Navbar from "../../components/Navbar";
 import InfoHeader from "../../components/Profile/InfoHeader";
 import Numbers from "../../components/Profile/Numbers";
@@ -6,11 +6,11 @@ import PostsGrid from "../../components/Profile/PostsGrid";
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import type { PostType, User } from "../../types/index";
+import type { User } from "../../types/index";
 
 const DEFAULT_PICTURE = "/default.jpeg";
 
-const profile: NextPage = () => {
+const Profile: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
 
@@ -26,7 +26,7 @@ const profile: NextPage = () => {
     posts: [],
   });
 
-  const { data, error } = useSWR(`/api/users/${id}`, (url) =>
+  useSWR(`/api/users/${id}`, (url) =>
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUserData(data.user))
@@ -53,4 +53,4 @@ const profile: NextPage = () => {
   );
 };
 
-export default profile;
+export default Profile;

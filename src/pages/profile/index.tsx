@@ -17,7 +17,7 @@ const Profile: NextPage = () => {
           profilePicture="/avatar1.png"
         />
         <StoriesBar profile />
-        <Numbers posts={"1"} followers={"849"} following={"4848"} />
+        <Numbers posts={"0"} followers={"849"} following={"4848"} />
         <PostsGrid username="johndoe_" />
       </main>
     </div>

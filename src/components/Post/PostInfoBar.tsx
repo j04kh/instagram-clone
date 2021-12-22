@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   username: string;
+  user_id: string;
   location?: string;
   profilePicture?: string;
 }
@@ -10,6 +12,7 @@ const defaultPicture = "/default.jpeg";
 
 const PostInfoBar: React.FC<Props> = ({
   username,
+  user_id,
   location,
   profilePicture,
 }) => {
@@ -26,7 +29,9 @@ const PostInfoBar: React.FC<Props> = ({
           />
         </div>
         <div className="flex-col">
-          <h1 className="text-sm font-semibold">{username}</h1>
+          <Link href={`/profile/${user_id}`}>
+            <a className="text-sm font-semibold">{username}</a>
+          </Link>
           <h2 className="text-gray-700 text-xs font-medium">{location}</h2>
         </div>
       </div>

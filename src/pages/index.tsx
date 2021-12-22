@@ -1,12 +1,11 @@
-import type { NextPage } from "next";
+import React from "react";
 import Navbar from "../components/Navbar";
 import StoriesBar from "../components/StoriesBar";
 import Post from "../components/Post";
-import React from "react";
 import useSWR from "swr";
 import type { PostType } from "../types/index";
 
-const Home: NextPage<any> = () => {
+const Home: React.FC = () => {
   const { data: posts, error: postsError } = useSWR("/api/posts", (url) =>
     fetch(url).then((res) => res.json())
   );
@@ -20,6 +19,7 @@ const Home: NextPage<any> = () => {
         <Post
           key={post._id}
           username={post.username}
+          user_id={post.user_id}
           location={post.location}
           likes={post.likes}
           timeAgo={post.timeAgo}

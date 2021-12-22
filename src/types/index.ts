@@ -1,6 +1,7 @@
 export type PostType = {
   _id: string;
   username: string;
+  user_id: string;
   profilePicture: string;
   location: string;
   photo: string;

@@ -24,6 +24,7 @@ const PostsGrid: React.FC<Props> = ({ username }) => {
         (post: PostType) =>
           post.username === username && (
             <Image
+              alt="Post"
               key={post.photo}
               src={post.photo}
               width={100}
