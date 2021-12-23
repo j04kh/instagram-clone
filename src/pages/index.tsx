@@ -6,10 +6,10 @@ import useSWR from "swr";
 import type { PostType } from "../types/index";
 
 const Home: React.FC = () => {
-  const { data: posts, error: postsError } = useSWR("/api/posts", (url) =>
+  const { data: posts } = useSWR("/api/posts/posts", (url) =>
     fetch(url).then((res) => res.json())
   );
-  const { data: stories, error: storiesError } = useSWR("/api/stories", (url) =>
+  const { data: stories } = useSWR("/api/stories", (url) =>
     fetch(url).then((res) => res.json())
   );
 
@@ -31,7 +31,6 @@ const Home: React.FC = () => {
     });
     return <React.Fragment>{postsList}</React.Fragment>;
   };
-
   return (
     <div className="w-full h-full min-w-screen min-h-screen">
       <Navbar />

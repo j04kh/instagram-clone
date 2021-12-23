@@ -3,6 +3,7 @@ import type { PostType } from "../../types/index";
 import useSWR from "swr";
 import { useState } from "react";
 import React from "react";
+import Link from "next/link";
 
 interface Props {
   username: string;
@@ -11,7 +12,7 @@ interface Props {
 const PostsGrid: React.FC<Props> = ({ username }) => {
   const [posts, setPosts] = useState<PostType[]>();
 
-  useSWR(`/api/posts`, (url) =>
+  useSWR(`/api/posts/posts`, (url) =>
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPosts(data.posts))
@@ -23,15 +24,19 @@ const PostsGrid: React.FC<Props> = ({ username }) => {
       userPosts = posts.map(
         (post: PostType) =>
           post.username === username && (
-            <Image
-              alt="Post"
-              key={post.photo}
-              src={post.photo}
-              width={100}
-              height={100}
-              objectFit="cover"
-              layout="responsive"
-            />
+            <Link href={`/posts/${post._id}`}>
+              <a>
+                <Image
+                  alt="Post"
+                  key={post._id}
+                  src={post.photo}
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                  layout="responsive"
+                />
+              </a>
+            </Link>
           )
       );
       return userPosts;

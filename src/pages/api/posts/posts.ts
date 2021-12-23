@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import dbconnect from "../../utils/database";
-import Post from "../../models/Post";
+import dbconnect from "../../../utils/database";
+import Post from "../../../models/Post";
 
 dbconnect();
 
