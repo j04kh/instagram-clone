@@ -5,11 +5,12 @@ import useSWR from "swr";
 import { useState } from "react";
 import type { PostType } from "../../types/index";
 
-const post: React.FC = () => {
+const PostPage: React.FC = () => {
   const router = useRouter();
   const { id } = router.query;
 
   const DEFAULT_PICTURE = "/default.jpeg";
+  const LOADING_SPINNER = "/loading.gif";
 
   const [postData, setPostData] = useState<PostType>({
     _id: "",
@@ -40,11 +41,11 @@ const post: React.FC = () => {
           description={postData.description}
           profilePicture={postData.profilePicture || DEFAULT_PICTURE}
           timeAgo={postData.timeAgo}
-          photo={postData.photo || DEFAULT_PICTURE}
+          photo={postData.photo || LOADING_SPINNER}
         />
       </div>
     </div>
   );
 };
 
-export default post;
+export default PostPage;

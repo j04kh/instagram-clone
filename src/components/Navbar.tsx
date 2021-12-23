@@ -17,7 +17,7 @@ const Navbar: React.FC<Props> = ({ page, username }) => {
   const router = useRouter();
 
   switch (page) {
-    case "profile":
+    case "myProfile":
       return (
         <header className="w-full h-12 px-4 z-10 fixed bg-white border-b border-gray-300 flex items-center justify-between">
           <ConfigIcon />
@@ -39,6 +39,16 @@ const Navbar: React.FC<Props> = ({ page, username }) => {
           </button>
 
           <h1 className="font-medium text-lg">Post</h1>
+          <div className="w-6" />
+        </header>
+      );
+    case "profile":
+      return (
+        <header className="w-full h-12 px-4 z-10 fixed bg-white border-b border-gray-300 flex items-center justify-between">
+          <button onClick={router.back}>
+            <ChevronLeft />
+          </button>
+          <h1 className="font-medium text-lg">{username}</h1>
           <div className="w-6" />
         </header>
       );

@@ -8,7 +8,7 @@ import PostsGrid from "../../components/Profile/PostsGrid";
 const Profile: NextPage = () => {
   return (
     <div className="w-screen h-screen bg-gray-100 ">
-      <Navbar page="profile" username="johndoe_" />
+      <Navbar page="myProfile" username="johndoe_" />
       <main className="w-full h-full max-w-lg mx-auto">
         <InfoHeader
           username="johndoe_"

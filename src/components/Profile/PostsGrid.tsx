@@ -24,11 +24,10 @@ const PostsGrid: React.FC<Props> = ({ username }) => {
       userPosts = posts.map(
         (post: PostType) =>
           post.username === username && (
-            <Link href={`/posts/${post._id}`}>
+            <Link key={post._id} href={`/posts/${post._id}`}>
               <a>
                 <Image
                   alt="Post"
-                  key={post._id}
                   src={post.photo}
                   width={100}
                   height={100}
