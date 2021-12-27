@@ -2,7 +2,7 @@
 
 ## About the project
 
-Instagram Clone built using Next.js and Tailwind CSS.
+Instagram Clone with using Next.js and Tailwind CSS.
 Posts and users data comes from MongoDB database using mongoose and Next.js API routes.
 
 ## Overview
